@@ -5,8 +5,8 @@
 
 const caesarModule = (function () {
   // you can add any code you want within this function scope
-  function caesar(input, shift = null, encode = true) {
-    if (shift === null) return false
+  function caesar(input, shift = 0, encode = true) {
+    if (shift === 0) return false
     if (shift >= 26 || shift <= -26) return false
     const offset = encode ? 1 : -1
     return input.toLowerCase().split("")
