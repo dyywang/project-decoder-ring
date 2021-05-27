@@ -29,4 +29,9 @@ describe("caesar", () => {
         const actual = caesar("thinkful", -77)
         expect(expected).to.eql(actual)
     })
+    it ("should return false when the shift is zero", () => {
+        const expected = false
+        const actual = caesar("thinkful", 0)
+        expect(expected).to.eql(actual)
+    })
 })
