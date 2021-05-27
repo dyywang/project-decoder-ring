@@ -29,7 +29,7 @@ const substitutionModule = (function () {
       return input.split("")
             .reduce( (acc, letter) => {
               if (letter === " ") acc += " "
-              acc += String.fromCharCode(alphabetarray.indexOf(letter) + 97)
+              else acc += String.fromCharCode(alphabetarray.indexOf(letter) + 97)
               return acc
             }, "")
   }
