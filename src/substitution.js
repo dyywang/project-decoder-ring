@@ -5,6 +5,7 @@
 
 const substitutionModule = (function () {
   function substitution(input, alphabet, encode = true) {
+    if (alphabet === undefined) return false
     if (alphabet.length !== 26) return false
     //encode
 
@@ -27,6 +28,7 @@ const substitutionModule = (function () {
     //decode 
       return input.split("")
             .reduce( (acc, letter) => {
+              if (letter === " ") acc += " "
               acc += String.fromCharCode(alphabetarray.indexOf(letter) + 97)
               return acc
             }, "")
